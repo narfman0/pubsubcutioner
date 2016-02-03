@@ -32,7 +32,7 @@ gulp.task('js', function () {
   return gulp.src(['./js/index.js'])
     .pipe(umd({
       exports: function(file) {
-        return 'Pubsubcutioner';
+        return 'Pubsubcutioner()';
       },
       namespace: function(file) {
         return 'Pubsubcutioner';
@@ -41,7 +41,7 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('test', function() {
+gulp.task('test', ['js'], function() {
   return gulp.src('./test/**/*.js', {read: false})
     .pipe(mocha({reporter: 'nyan'}));
 });

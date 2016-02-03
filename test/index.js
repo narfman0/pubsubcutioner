@@ -3,6 +3,6 @@ var should = require('chai').should(),
 
 describe('#placeholder', function() {
     it('Placeholder test code', function() {
-        objResult.'value'.should.equal('value');
+        'value'.should.equal('value');
     });
 });

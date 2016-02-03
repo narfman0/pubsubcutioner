@@ -11,7 +11,13 @@ Shamelessly ripped from https://github.com/mroderick/PubSubJS, and adding regex 
 Usage
 -----
 
-TODO...?
+After grabbing an instance of pubsub, subscribe and publish events as desired:
+
+    var pubsub = require('pubsubcutioner');
+    pubsub.subscribe('eventname', function(data){
+        console.log(data.text);
+    });
+    pubsub.publish('eventname', {text: 'Hello, world!'});
 
 License
 -------

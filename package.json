@@ -12,9 +12,8 @@
     "url": "http://www.github.com/narfman0/pubsubcutioner"
   },
   "keywords": [
-    "janrain",
-    "capture",
-    "authn"
+    "event",
+    "pubsub"
   ],
   "author": "Jon Robison <narfman0@gmail.com> (http://www.github.com/narfman0)",
   "license": "MIT",

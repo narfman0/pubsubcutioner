@@ -1,5 +1,5 @@
 var should = require('chai').should(),
-    module = require('../dist/index');
+    module = require('../dist/pubsubcutioner');
 
 describe('#publish-subscribe', function() {
     it('Test subscribe and publish', function() {

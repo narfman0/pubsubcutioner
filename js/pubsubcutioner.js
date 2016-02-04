@@ -219,5 +219,8 @@ function Pubsubcutioner() {
         return result;
     };
 
+    if(typeof window !== 'undefined'){
+        window.pubsubcutioner = methods;
+    }
     return methods;
 }

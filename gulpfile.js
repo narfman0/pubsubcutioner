@@ -22,14 +22,14 @@ gulp.task('clean', function () {
 });
 
 gulp.task('compress', ['js'], function() {
-  return gulp.src('dist/index.js')
+  return gulp.src('dist/pubsubcutioner.js')
     .pipe(uglify())
-    .pipe(concat('index.min.js'))
+    .pipe(concat('pubsubcutioner.min.js'))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('js', function () {
-  return gulp.src(['./js/index.js'])
+  return gulp.src(['./js/pubsubcutioner.js'])
     .pipe(umd({
       exports: function(file) {
         return 'Pubsubcutioner()';

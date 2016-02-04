@@ -1,9 +1,9 @@
 {
   "name": "pubsubcutioner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pubsub supporting regex and a fancy name",
   "files": ["dist"],
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "mocha test/*"
   },

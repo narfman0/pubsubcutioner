@@ -5,7 +5,8 @@ describe('#publish-subscribe', function() {
     it('Test subscribe and publish', function() {
         var event1 = 'event1';
         var value1 = 'value1';
-        module.subscribe(event1, function(data){
+        module.subscribe(event1, function(name, data){
+            name.should.equal(event1);
             data.value.should.equal(value1);
         });
         module.publish(event1, {value: value1});

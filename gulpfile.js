@@ -14,7 +14,7 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('build', ['js', 'compress'], function () {});
+gulp.task('build', ['js', 'test', 'compress'], function () {});
 
 gulp.task('clean', function () {
   return gulp.src('./dist', {read: false})
@@ -47,7 +47,7 @@ gulp.task('test', ['js'], function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./js/**/*.js', ['js', 'compress']);
+  gulp.watch('./{test,js}/**/*.js', ['build']);
 });
 
 gulp.task('default', ['lint', 'build', 'watch']);

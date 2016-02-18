@@ -3,6 +3,13 @@ Pubsubcutioner
 
 Pubsub framework supporting regex and a brutal name
 
+Installation
+------------
+
+Install via npm:
+
+    npm install -D pubsubcutioner
+
 Usage
 -----
 

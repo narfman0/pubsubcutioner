@@ -23,7 +23,13 @@ function Pubsubcutioner() {
         var subscribers = gatherSubscribers(message), s;
         for (s in subscribers){
             if ( subscribers.hasOwnProperty(s)){
-                subscribers[s](message, data);
+                try{
+                    subscribers[s](message, data);
+                }catch(e){
+                    if(typeof console !== 'undefined'){
+                        console.log(e.stack);
+                    }
+                }
             }
         }
         return true;

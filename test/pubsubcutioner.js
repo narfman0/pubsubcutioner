@@ -15,10 +15,13 @@ describe('#publish-subscribe-simple', function() {
         });
         module.publish(event1, {value: value1});
     });
+    after(function() {
+        module.unsubscribe(event1);
+    });
 });
 
 describe('#publish-subscribe-regex', function() {
-    it('Test subscribe and publish', function() {
+    it('Test subscribe and publish regex', function() {
         var results = {};
         module.subscribe(eventR, function(name, data){
             results[name] = data;
@@ -26,6 +29,22 @@ describe('#publish-subscribe-regex', function() {
         module.publish(event1, {value: value1});
         module.publish(event2, {value: value2});
         Object.keys(results).length.should.equal(2);
-        // results.should.eventually.have.length(2);
+    });
+    after(function() {
+        module.unsubscribe(event1);
+        module.unsubscribe(event2);
+    });
+});
+
+describe('#publish-subscribe-exception', function() {
+    it('Test subscribe and publish exceptions', function() {
+        module.subscribe(event1, function(name, data){
+            garbage();
+        });
+        module.publish(event1, {});
+        // if we made it here there is no crash :)
+    });
+    after(function() {
+        module.unsubscribe(event1);
     });
 });

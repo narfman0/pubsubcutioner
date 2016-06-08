@@ -121,7 +121,11 @@ function Pubsubcutioner() {
     };
 
     if(typeof window !== 'undefined'){
-        window.pubsubcutioner = methods;
+        if(window.pubsubcutioner){
+            console.err('pubsubcutioner already initialized, aborting!');
+        }else{
+            window.pubsubcutioner = methods;
+        }
     }
     return methods;
 }

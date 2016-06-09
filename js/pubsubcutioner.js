@@ -122,7 +122,7 @@ function Pubsubcutioner() {
 
     if(typeof window !== 'undefined'){
         if(window.pubsubcutioner){
-            console.err('pubsubcutioner already initialized, aborting!');
+            console.error('pubsubcutioner already initialized, aborting!');
         }else{
             window.pubsubcutioner = methods;
         }

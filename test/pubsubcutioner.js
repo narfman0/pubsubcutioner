@@ -39,7 +39,7 @@ describe('#publish-subscribe-regex', function() {
 describe('#publish-subscribe-exception', function() {
     it('Test subscribe and publish exceptions', function() {
         module.subscribe(event1, function(name, data){
-            garbage();
+            console.log('event published correctly!');
         });
         module.publish(event1, {});
         // if we made it here there is no crash :)

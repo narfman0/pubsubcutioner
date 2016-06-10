@@ -1,6 +1,6 @@
 {
   "name": "pubsubcutioner",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Pubsub supporting regex and a brutal name",
   "files": ["dist"],
   "main": "dist/pubsubcutioner.js",
